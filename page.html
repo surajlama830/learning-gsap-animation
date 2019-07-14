@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gsap</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left-col">
+
+            <div class="logo">ALTRNTV</div>
+
+            <div class="year">EST 1994</div>
+            <div class="buy">
+                <p id="more">Buy Now</p>
+            </div>
+            <div class="block-cover">
+                
+            </div>
+            <div class="cover">
+
+                <div class="play">
+
+                    <ion-icon name="play"></ion-icon>
+
+                </div>
+
+                <div class="data">
+
+                    <div class="album-name">
+
+                        <p id="name">Kinda like it</p>
+
+                    </div>
+
+                    <div class="album-artist">
+
+                        <p id="artist">Freak like me</p>
+
+                    </div>
+
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="right-col">
+            <div class="upper">
+                <div class="about">
+                    <h1>Songs info</h1>
+                    <div class="album-name2">
+                        <p>
+                            <ion-icon name="radio"></ion-icon>&nbsp; <span>Kinda like it</span>
+                        </p>
+                    </div>
+                    <div class="album-artist2">
+                        <p>
+                            <ion-icon name="person"></ion-icon>&nbsp;<span> Freak like me</span>
+                        </p>
+                    </div>
+                    <div class="album-genre2">
+                        <p>
+                            <ion-icon name="musical-notes"></ion-icon>&nbsp;<span>
+                                Alternative</span> </p> </div> 
+                                <div class="media">
+                                    <p>Share now : </p>
+                                    <ul>
+                                        <li>
+                                            <ion-icon name="logo-facebook"></ion-icon>
+                                        </li>
+                                        <li>
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </li>
+                                        <li>
+                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        </li>
+                                        <li>
+                                            <ion-icon name="logo-whatsapp"></ion-icon>
+                                        </li>
+                                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="upper-block"></div>
+
+            <div class="bottom">
+                <div class="next">
+                    <ion-icon name="fastforward"></ion-icon>
+                </div>
+                <div class="data2">
+                    <div class="album-name3">
+                        <p id="name">Think about it</p>
+                    </div>
+                    <div class="album-artist3">
+                        <p id="artist">vhouce Alwen</p>
+                    </div>
+                </div>
+                <div class="more">
+                    <p id="more-like">More like this</p>
+                </div>
+            </div>
+            <div class="block-bottom"></div>
+
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+   TweenMax.from('.logo',1.6,{
+        delay: 1.5,
+        y:20,
+        opacity:0,
+        ease:Expo.easeInOut, 
+    })
+     TweenMax.from('#more', 1.6, {
+            delay: 1.7,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+    TweenMax.from('.album-name', 1.6, {
+            delay: 1.9,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+    TweenMax.from('.album-artist', 1.6, {
+            delay: 2.1,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+    TweenMax.from('.year', 1.6, {
+                delay: 2.3,
+                y: 20,
+                opacity: 0,
+                ease: Expo.easeInOut,
+        })
+
+     TweenMax.from('h1', 1.6, {
+            delay: 2.5,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+
+     TweenMax.from('.album-name2', 1.6, {
+            delay: 2.7,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+     TweenMax.from('.album-artist2', 1.6, {
+            delay: 2.9,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+     TweenMax.from('.album-genre2', 1.6, {
+            delay: 3.1,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+    TweenMax.from('.media p', 1.6, {
+            delay: 3.3,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+     TweenMax.staggerFrom('ul li', 1.6, {
+            delay: 3.5,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        },0.2)
+   
+        TweenMax.from('.next', 1.6, {
+            delay: 3.3,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.from('.album-name3', 1.6, {
+            delay: 3.5,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        }) 
+        TweenMax.from('.album-artist3', 1.6, {
+            delay: 3.7,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+    TweenMax.from('#more-like', 1.6, {
+            delay: 3.8,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+        })
+
+    
+    
+    </script>
+</body>
+
+</html>

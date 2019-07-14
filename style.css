@@ -1,0 +1,352 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100vh;
+    font-family:Helvetica, sans-serif;
+}
+.left-col, .right-col{
+    position:absolute;
+    width:50%;
+    height:100vh;
+}
+.left-col{
+    background:#d45b48;
+    width:0%;
+    height:100vh;
+    animation:revBlock 2.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.2s;
+}
+@keyframes revBlock{
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    50% {
+        width: 50%;
+        left: 0;
+    }
+
+    100% {
+        width: 50%;
+        left: 0%;
+    }
+
+}
+.right-col{
+    left:50%;
+}
+.upper{
+    position: absolute;
+    width:0%;
+    height:50vh;
+    background: #4f4538;
+    animation:revealBLOCK 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay:2.2s;
+    z-index: 9;
+    opacity: 0;
+
+}
+
+.upper::after{
+    content:'';
+    position: absolute;
+    width:0%;
+    height:100%;
+    background:#695c4b;
+    animation:revealBlock 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay:1s;
+}
+
+.bottom{
+    position:absolute;
+    top:50%;
+    height: 50vh;
+    width:100%;
+    background : url(1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+     animation:revealBLOCK 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+     animation-delay:3s;
+     z-index: 9;
+     opacity: 0;
+}
+@keyframes revealBLOCK {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        left: 0%;
+        opacity: 1;
+    }
+}
+.bottom::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+    animation: revealBlock 1.3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 3s;
+}
+@keyframes revealBlock {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    10% {
+        width: 100%;
+        left: 0;
+    }
+    80%{
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0%;
+        left: 100%;
+    }
+}
+
+@media(max-width:900px){
+    .left-col{
+        width:100%;
+    }
+     .right-col {
+         width: 100%;
+         top:100%;
+         left:0;
+     }
+     @keyframes revBlock {
+         0% {
+             width: 0%;
+             left: 0;
+         }
+
+         50% {
+             width: 100%;
+             left: 0;
+         }
+
+         100% {
+             width: 100%;
+             left: 0%;
+         }
+
+     }
+     
+}
+.logo{
+    font-family: sans-serif;
+    color:#fff;
+    position:fixed;
+    margin:1.4em;
+    font-weight:bold;
+    z-index: 1;
+}
+.year{
+    position: absolute;
+    color:#000;
+    font-family: sans-serif;
+    bottom: 8%;
+    font-weight:bold;
+    transform:rotate(-90deg);
+    left:0%;
+}
+.buy{
+    color:#f4c8ad;
+    font-family: sans-serif;
+    text-decoration:underline;
+    position:absolute;
+    top:-2.6%;
+    right:0%;
+    margin:1.4em;
+}
+.cover{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:45%;
+    height:50%;
+    opacity:0;
+    background:url(a.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    animation:reveal 1s linear forwards;
+    animation-delay: 1.5s;
+}
+@keyframes reveal{
+    0%{
+        opacity:0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        z-index: 9;
+    }
+}
+.data{
+    position:absolute;
+    top:30%;
+    left:3%;
+    transform:translate(-50%, -50%);
+    color:#f4c8ad;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    letter-spacing: 4px;
+}
+#name{
+    font-weight: bolder;
+}
+#artist{
+    font-size: 10px;
+}
+.play ion-icon{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,0.3);
+    padding:1.5em;
+    font-size: 2.5em;
+    opacity:0.6;
+}
+
+.about{
+    position: absolute;
+    top:40%;
+    left:26%;
+    transform:translate(-50%,-50%);
+}
+.about h1{
+    font-weight:bolder;
+    color:#6f6457;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.about p{
+    color:#bcac98;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+.about span:hover{
+    text-decoration: underline;
+}
+.media {
+    margin-top:40px;
+}
+.media p{
+    color:#6f6457;
+}
+.media ul{
+    position: absolute;
+    list-style: none;
+    left: -21%;
+}
+.media ul li{
+    display: inline-block;
+    color:#bcac98;
+    padding-right:10px;
+}
+.next{
+    position:absolute;
+    top:24%;
+    left:16%;
+}
+.data2{
+    position:absolute;
+    top:16%;
+    left:25%;
+    color:#f4c8ad;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.next ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 1.5em;
+    font-size: 2.5em;
+    opacity: 0.6;
+}
+.play ion-icon:hover,.next ion-icon:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+#name{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.more{
+    position:absolute;
+    top:80%;
+    left:26%;
+    font-size: 14px;
+    /* opacity: 1; */
+    color:#f4c8ad;
+    text-transform: uppercase;
+    text-decoration:underline;
+}
+.more:hover{
+    /* opacity: 1; */
+    cursor: pointer;
+}
+
+.block-cover{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 45%;
+    height:50%;
+    z-index: 2;
+}
+.block-cover::after{
+    content:'';
+    top:0;
+    left:0;
+    position: absolute;
+    width: 0%;
+    height:100%;
+    background:#4f4538;
+    animation:rev-block 1.52s cubic-bezier(0.19,1,0.22,1) forwards;
+    animation-delay: 1s;
+}
+@keyframes rev-block{
+     0% {
+         width: 0%;
+         left: 0;
+     }
+
+     50% {
+         width: 100%;
+         left: 0;
+     }
+
+     100% {
+         width: 0%;
+         left: 100%;
+     }
+}
